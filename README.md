@@ -4,5 +4,5 @@ This simple server-side exercise was done as part of the Node section 'Working w
 ## Assigment
 Build an Express server with a GET endpoint /apps. By default return the complete list of apps in the array. The endpoint accepts the following optional query parameters:
 
-sort ('rating' or 'app')
-genres ('Action', 'Puzzle', 'Strategy', 'Casual', 'Arcade', Card')
+* sort ('rating' or 'app')
+* genres ('Action', 'Puzzle', 'Strategy', 'Casual', 'Arcade', Card')
