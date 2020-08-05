@@ -21,8 +21,6 @@ app.get('/apps', (req, res) => {
         .filter(app => app.App.toLowerCase())
         .filter(app => app.Genres.toLowerCase().includes(genres.toLowerCase()));    
 
-  console.log("Results: " + JSON.stringify(results, null, 1));
-
   //Sort the floating point ratings when rating is selected
   if (sort && ['rating'].includes(sort)) {
     console.log("Sort selected: " + sort);
@@ -37,13 +35,9 @@ app.get('/apps', (req, res) => {
   if (sort && ['app'].includes(sort)) {
     console.log("Sort selected: " + sort);
     let newResults = results.sort((a, b) => {
-      //console.log("a: " + JSON.stringify(a["App"], null, 1));
-      //console.log("b: " + JSON.stringify(b["App"], null, 1));
       console.log("");
       let val1 = a["App"].toLowerCase();
       let val2 = b["App"].toLowerCase();
-      //let val1 = a["App"];
-      //let val2 = b["App"];
       console.log("val1, val2: " + val1 + " vs " + val2);
       if ( val1 > val2 ) {
         return 1;
@@ -52,12 +46,10 @@ app.get('/apps', (req, res) => {
         return -1;
       }
       return 0;
-      //return a[sort] > b[sort] ? 1 : a[sort] < b[sort] ? -1 : 0;
     });
-    //console.log("Sort results: " + JSON.stringify(newResults, null, 1));
   }
 
-  console.log("Results: " + JSON.stringify(results, null, 1));
+  //console.log("Results: " + JSON.stringify(results, null, 1));
   res.json(results);
 });
 
