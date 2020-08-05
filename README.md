@@ -6,3 +6,8 @@ Build an Express server with GET endpoint /apps. By default return the complete 
 
 * sort ('rating' or 'app')
 * genres ('Action', 'Puzzle', 'Strategy', 'Casual', 'Arcade', Card')
+
+## Example Commands
+http://localhost:8000/apps
+http://localhost:8000/apps?sort=app
+http://localhost:8000/apps?genres=casual&sort=rating
