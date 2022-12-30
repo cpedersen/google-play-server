@@ -21,7 +21,7 @@
   "homepage": "https://github.com/cpedersen/google-play-server#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.1.1",
+    "mocha": "^8.4.0",
     "nodemon": "^2.0.4",
     "supertest": "^4.0.2"
   },
